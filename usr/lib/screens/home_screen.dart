@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:couldai_user_app/providers/wallet_provider.dart';
+import 'package:couldai_user_app/widgets/wallet_header.dart';
 import 'package:couldai_user_app/screens/image_generation_screen.dart';
 import 'package:couldai_user_app/screens/photo_analyze_screen.dart';
 import 'package:couldai_user_app/screens/chat_screen.dart';
@@ -32,6 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(80),
+        child: const WalletHeader(),
+      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

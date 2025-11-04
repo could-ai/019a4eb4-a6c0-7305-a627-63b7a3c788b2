@@ -1,5 +1,5 @@
 name: couldai_user_app
-description: "An AI application for photo/gif generation, photo analysis, Q&A, PDF analysis, and personalized image creation."
+description: "An AI application for photo/gif generation, photo analysis, Q&A, PDF analysis, and personalized image creation with wallet and redeem features."
 publish_to: 'none' 
 
 version: 1.0.0+1
@@ -12,13 +12,15 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-  flutter_lints: ^5.0.0
+  http: ^1.2.1
+  image_picker: ^1.1.2
+  pdf: ^3.10.8
+  provider: ^6.1.2
+  shared_preferences: ^2.3.2
+  flutter_dotenv: ^5.1.0
 
 flutter:
-
   uses-material-design: true
+
+assets:
+  - .env
